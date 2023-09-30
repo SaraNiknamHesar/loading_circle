@@ -9,14 +9,38 @@
     <title>Animation</title>
 </head>
 <style>
-   
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+        height: 100%;
+
+    }
+    .loading {
+        text-align: center;
+        width: 80px;
+        height: 80px;
+        border: 10px solid #efefef;
+        border-top: 10px solid red;
+        border-radius: 100%;
+        animation: roundedCircle 1s ease infinite ;
+    }
+    @keyframes roundedCircle {
+      from{
+          transform: rotate(0deg);
+      }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+
 </style>
 <body>
 <div class="container">
     <div class="row">
-        <div class="anime">
-
-        </div>
+      <div class="wrapper">
+          <div class="loading"></div>
+      </div>
     </div>
 </div>
 </body>
